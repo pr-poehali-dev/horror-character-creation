@@ -1,13 +1,65 @@
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-@layer base {
-  :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+:root {
+  --background: 220 10% 10%;
+  --foreground: 0 0% 98%;
+  --card: 220 10% 12%;
+  --card-foreground: 0 0% 95%;
+  --popover: 220 10% 12%;
+  --popover-foreground: 0 0% 98%;
+  --primary: 345 80% 50%;
+  --primary-foreground: 0 0% 98%;
+  --secondary: 260 40% 20%;
+  --secondary-foreground: 0 0% 98%;
+  --muted: 240 5% 25%;
+  --muted-foreground: 240 5% 65%;
+  --accent: 345 80% 35%;
+  --accent-foreground: 0 0% 98%;
+  --destructive: 0 80% 50%;
+  --destructive-foreground: 0 0% 98%;
+  --border: 240 3.7% 30%;
+  --input: 240 3.7% 30%;
+  --ring: 345 80% 50%;
+  --radius: 0.5rem;
+}
 
-    --card: 0 0% 100%;
+@layer base {
+  body {
+    @apply bg-background text-foreground;
+    font-feature-settings: "rlig" 1, "calt" 1;
+    background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23430000' fill-opacity='0.05'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+  }
+}
+
+@font-face {
+  font-family: 'Creepster';
+  src: url('https://fonts.googleapis.com/css2?family=Creepster&display=swap');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.horror-title {
+  font-family: 'Creepster', cursive;
+  text-shadow: 2px 2px 4px rgba(255, 0, 0, 0.3);
+}
+
+.gore-border {
+  border: 2px solid rgba(128, 0, 0, 0.7);
+  box-shadow: 0 0 8px rgba(180, 0, 0, 0.4);
+}
+
+.creepy-card {
+  transition: all 0.3s ease;
+}
+
+.creepy-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
     --card-foreground: 222.2 84% 4.9%;
 
     --popover: 0 0% 100%;
