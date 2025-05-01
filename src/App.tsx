@@ -15,10 +15,14 @@ const App = () => (
       <Toaster />
       <Sonner />
       <BrowserRouter>
-        <Routes>
-          <Route path="/" element={<Index />} />
-          {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
-          <Route path="*" element={<NotFound />} />
+
+          <Routes>
+            <Route path="/" element={<Index />} />
+            <Route path="/register" element={React.lazy(() => import('./pages/Register'))} />
+            {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
+            <Route path="*" element={<NotFound />} />
+          </Routes>
+
         </Routes>
       </BrowserRouter>
     </TooltipProvider>

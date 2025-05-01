@@ -9,8 +9,11 @@ const Index = () => {
     <div className="min-h-screen flex flex-col">
       {/* Header with blood dripping effect */}
       <header className="bg-black py-6 border-b border-red-900">
-        <div className="container mx-auto px-4">
-          <h1 className="horror-title text-5xl md:text-6xl text-red-600 text-center mb-2">
+
+import { Link } from "react-router-dom";
+
+const Index = () => {
+
             Хоррис<span className="text-white">Lady</span>
           </h1>
           <p className="text-gray-400 text-center italic">Коллекция жутких историй и персонажей</p>
